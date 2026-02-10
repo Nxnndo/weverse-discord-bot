@@ -52,4 +52,13 @@ async def on_ready():
 
         await asyncio.sleep(CHECK_INTERVAL)
 
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    if message.content == "!test":
+        await message.channel.send("@everyone 🔔 **TEST ALERT** — bot is working!")
+
 client.run(TOKEN)
+
