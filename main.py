@@ -13,7 +13,7 @@ PRODUCT_URLS = [
     "https://shop.weverse.io/en/shop/USD/artists/2/sales/54379"
 ]
 
-CHECK_INTERVAL = 180  # seconds
+CHECK_INTERVAL = 30  # seconds
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0"
@@ -61,4 +61,5 @@ async def on_message(message):
         await message.channel.send("@everyone 🔔 **TEST ALERT** — bot is working!")
 
 client.run(TOKEN)
+
 
